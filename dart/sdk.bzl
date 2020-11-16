@@ -109,9 +109,9 @@ _linux_file = "dartsdk-linux-x64-release.zip"
 _mac_file = "dartsdk-macos-x64-release.zip"
 
 # From https://www.dartlang.org/tools/sdk/archive
-_version = "2.10.4"
-_linux_sha = "789f56cb6da0cfb2b97d9ea0942bc3f26fc20fd86256b1101e0147aa9790585e"
-_mac_sha = "45c28ed3eb036edd1f5b0a7a073afddd1900f96abc3be085fe9335a424a228b4"
+_version = "2.9.3"
+_linux_sha = "6719026f526f3171274dc9d8322c33fd9ec22e659e8dd833c587038211b83b04"
+_mac_sha = "f29ff9955b024bcf2aa6ffed6f8f66dc37a95be594496c9a2d695e67ac34b7ac"
 
 def _sdk_repository_impl(repository_ctx):
     """Downloads the appropriate SDK for the current OS."""
