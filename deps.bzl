@@ -1,4 +1,5 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 MAVEN_SERVER_URLS = [
      "https://maven.google.com",
@@ -297,9 +298,12 @@ def io_bazel_rules_dart(**kwargs):
     """Dart Rules
     """
     name = "io_bazel_rules_dart"
-    ref = get_ref(name, "07aa5a42827f74d707ad3abcd3edbc14c7cad837", kwargs)  # Mar 11 (fork of dart-lang/rules_dart)
-    sha256 = get_sha256(name, "836aa1908fda2c5f25f5a8dc298399d60252006c2953d170b95a33bfc5b5de14", kwargs)
-    github_archive(name, "FKint", "rules_dart", ref, sha256)
+    git_repository(
+        name = "io_bazel_rules_dart",
+        remote = "https://github.com/cbracken/rules_dart.git",
+        commit = "4beaf03d550780efb35f0a5879d01326f729f5e9", # dart sdk 2.9.3
+        shallow_since = "1600481248 -0700",
+    )
 
 def io_bazel_rules_d(**kwargs):
     """d Rules
